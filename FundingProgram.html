@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Fuding program</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background-color: black;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+#mySidebar {
+  position: absolute;
+  left: 0px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\w3.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\googleapiroboto.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\googleapimontserrat.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\all.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\all.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\brands.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\brands.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\fontawesome.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\fontawesome.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\regular.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\regular.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\solid.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\solid.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\svg-with-js.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\svg-with-js.min.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\v4-shims.css">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\css\v4-shims.min.css">
+<style>
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\all.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\all.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\brands.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\brands.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\conflict-detection.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\conflict-detection.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\fontawesome.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\fontawesome.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\regular.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\regular.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\solid.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\solid.min.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\v4-shims.js">
+<link rel="stylesheet" href="C:\Users\YUNG FX PABLO\Desktop\Website code\fontawesome-free-5.15.4-web\js\v4-shims.min.js">
+<script>
+
+</script>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+    </head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>YUNG FX PABLO</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button">Funding Program</a>
+    <a href="#" class="w3-bar-item w3-button">Log in</a>
+    <a href="#" class="w3-bar-item w3-button">Premium Course</a>
+    </div>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>  
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">YUNG FX PABLO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left" style="color:white;">Home of Traders</p>
+  </header>
+  
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="C:\Users\YUNG FX PABLO\Desktop\Website code\images\1267588.jpg" alt="Forex chart" style="width:103%">
+    <div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+  </div>
+
+   <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center w3-blue">GET FUNDED</h2>
+   <h3 class="w3-wide w3-center">Free Funding Model ( 20 Days - Evaluation)</h3>
+      <p class="w3-opacity w3-center"><i><b>The First Free Funding Model starting from as little as 5$.
+<br/>We believe in you, with just 20 days of evaluation to prove consistency & profitability with working with us.
+<br/>One Account - One Trader - Once-Off. Choose Your Account of Comfort & Start Trading Today!
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-black w3-hover-opacity">
+            <h2 class="w3-wide w3-center"><b> 5 000$</b></h2>
+            <p><b>Free Funded Account</b></p>
+            <p class="w3-opacity">Growth - Up to 20K</p>
+             <p class="w3-opacity"> - 10% Max Drawdown </p>
+             <p class="w3-opacity"> Monthly Target = 5% Profit
+             <p class="w3-opacity"> Profit Split : 75 / 25
+            <p>Requirements: At least 2 trades per/week.</p>
+            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">5$ - Verification Purchase</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-black w3-hover-opacity">
+            <h2 class="w3-wide w3-center"><b> 10 000$</b></h2>
+            <p><b>Free Funded Account</b></p>
+            <p class="w3-opacity">Growth - Up to 70K</p>
+            <p class="w3-opacity"> - 10% Max Drawdown 
+            <p class="w3-opacity"> Monthly Target = 5% Profit
+            <p class="w3-opacity"> Profit Split : 80 / 20
+            <p>Requirements: At least 3 trades per/week.</p>
+            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">12$ - Verification Purchase</button>
+          </div>
+         </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-black w3-hover-opacity">
+            <h2 class="w3-wide w3-center"><b> 25 000$</b></h2>
+            <p><b>Free Funded Account</b></p>
+            <p class="w3-opacity">Growth - Up to 150K</p>
+            <p class="w3-opacity"> - 10% Max Drawdown 
+            <p class="w3-opacity"> Monthly Target = 5% Profit
+            <p class="w3-opacity"> Profit Split : 90 / 10
+            <p>Requirements: At least 5 trades per/week.</p>
+            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">40$ - Verification Purchase</button>
+          </div>
+        </div>
+       </div>
+      </div>
+       <h6 class="w3-wide w3-center w3-blue">Recieve your account in less than 24 Hours</h6>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
+      Account Rules & Regulations <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-down w3-margin-right"></i>Account Rules</a>
+      <h2 class="w3-wide w3-center"><b> Risk Management</b></h2>
+      <p> - As professional traders in Blue Growth, we not only looking for traders who can make money we looking for traders who can actually keep it. </p>
+      <p> - You have the freedom of space to manage your trades in any different enviroments with absolutely the choice of your own risk per trade. </p>
+      <p> - The 5% drawdown rule is set to protect our funds as soon as we notice irresponsible & poor risk management. </p>
+      <p> - Bi-Weekly Withdrawals after every target hit. </p>
+      <p> - Double Account Every Week - One Account Per Trader. If suspected, termination of account may proceed. </p>
+    <div/>
+   <div/>
+  
+       <h2 class="w3-wide w3-center"><b> Consistency & Discipline</b></h2>
+      <p> - 2 Days of trading is required per week.</p>
+      <p> - 20 Days of trading in Evaluation. Bi-weekly withdrawals. </p>
+      <p> - MT4 & MT5 Accounts Available. </p>
+      <p> - Exness ltd - Brokerage Lisenced. 
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-down w3-margin-right"></i>Account Regulations</a>
+       <p> - Trading is not allowed in some countries like Singapore, Morica etc. Please Validate Your Country.</p>
+       <p> - Client Trader must be 18 years or older. </p>
+       <p> - Client Trader must not be government public figure, or in any political fragments.</p>
+      <div/>
+      </div>
+
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-black w3-small w3-center" id="footer" style="width:105%;">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Feel Free, Talk to Me!</h4>
+        <p>Any Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-blue">Send</button>
+        </form>
+      </div>
+       <div class="w3-col s4 w3-justify">
+        <h4>Education & Funding</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Yung FX Pablo</p>
+        <p><i class="fa fa-fw fa-phone"></i> +27678222588</p>
+        <p><i class="fa fa-fw fa-envelope"></i> pablo.forex2021@gmail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-paypal"></i> Paypal</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+       </form>
+      </div>
+       <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring traders</a></p>
+        <p><a href="#">Start Learning</a></p>
+      </div>
+  </footer>
+
+   <div class="w3-black w3-center w3-padding-24"><b>Yung FX Pablo</b>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
