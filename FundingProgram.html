@@ -94,8 +94,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href="FundingProgram.html" class="w3-bar-item w3-button">Funding Program</a>
     <a href="Login" class="w3-bar-item w3-button">Log in</a>
     <a href="Mentorship.html" class="w3-bar-item w3-button">Premium Course</a>
-    <a href="#" class="w3-bar-item w3-button">The Book Club</a>
-    <a href="#" class="w3-bar-item w3-button">Store</a>
+    <a href="Book Club.html" class="w3-bar-item w3-button">The Book Club</a>
+    <a href="Store.html" class="w3-bar-item w3-button">Store</a>
     </div>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>  
@@ -165,7 +165,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           shape: 'rect',
           color: 'blue',
           layout: 'vertical',
-          label: 'checkout',
+          label: '5$ Verification Purchase',
           
         },
 
@@ -222,13 +222,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           shape: 'rect',
           color: 'blue',
           layout: 'vertical',
-          label: 'checkout',
+          label: '12$ Verification Purchase',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":11.99}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":12}}]
           });
         },
 
@@ -279,13 +279,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           shape: 'rect',
           color: 'blue',
           layout: 'vertical',
-          label: 'checkout',
+          label: '40$ Verification Purchase',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":39.99}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":40}}]
           });
         },
 
@@ -312,9 +312,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     }
     initPayPalButton();
   </script>
-          </div>
         </div>
        </div>
+        
+        </div> 
       </div>
        <h6 class="w3-wide w3-center w3-blue">Recieve your account in less than 24 Hours</h6>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-black w3-left-align" id="myBtn">
