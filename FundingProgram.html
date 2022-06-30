@@ -152,7 +152,52 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
              <p class="w3-opacity"> Monthly Target = 5% Profit
              <p class="w3-opacity"> Profit Split : 75 / 25
             <p>Requirements: At least 2 trades per/week.</p>
-            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">5$ - Verification Purchase</button>
+            <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AWDhMRXptCT-22ULkYCFBMHGRyf8hNHDandnIvwlef3WzEor10mBOXZz4RECQ4vSLRVKM6Fp6Gld1xqk&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'checkout',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":5}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -164,7 +209,52 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
             <p class="w3-opacity"> Monthly Target = 5% Profit
             <p class="w3-opacity"> Profit Split : 80 / 20
             <p>Requirements: At least 3 trades per/week.</p>
-            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">12$ - Verification Purchase</button>
+            <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AWDhMRXptCT-22ULkYCFBMHGRyf8hNHDandnIvwlef3WzEor10mBOXZz4RECQ4vSLRVKM6Fp6Gld1xqk&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'checkout',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":11.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
           </div>
          </div>
         <div class="w3-third w3-margin-bottom">
@@ -176,7 +266,52 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
             <p class="w3-opacity"> Monthly Target = 5% Profit
             <p class="w3-opacity"> Profit Split : 90 / 10
             <p>Requirements: At least 5 trades per/week.</p>
-            <button class="w3-button w3-blue w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">40$ - Verification Purchase</button>
+            <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AWDhMRXptCT-22ULkYCFBMHGRyf8hNHDandnIvwlef3WzEor10mBOXZz4RECQ4vSLRVKM6Fp6Gld1xqk&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'checkout',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":39.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
           </div>
         </div>
        </div>
