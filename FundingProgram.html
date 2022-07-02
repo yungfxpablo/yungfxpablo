@@ -219,10 +219,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     function initPayPalButton() {
       paypal.Buttons({
         style: {
-          shape: 'rect',
-          color: 'blue',
+          shape: 'pill',
+          color: 'silver',
           layout: 'vertical',
-          label: 'checkout',
+          label: 'buynow',
           
         },
 
@@ -276,16 +276,16 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     function initPayPalButton() {
       paypal.Buttons({
         style: {
-          shape: 'rect',
-          color: 'blue',
+          shape: 'pill',
+          color: 'gold',
           layout: 'vertical',
-          label: 'checkout',
+          label: 'pay',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":40}}]
+            purchase_units: [{"description":"25 000 USD - Funded Account.\n40$ One-Off fee to verify your account & profile for verification.","amount":{"currency_code":"USD","value":40}}]
           });
         },
 
